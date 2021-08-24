@@ -22,7 +22,6 @@ module.exports = {
         const matchID = args[0].split('matches/').slice(-1)[0]
         console.log(matchID)
         const match_data = await fetchMatch(matchID)
-        console.log(match_data)
         const { games } = match_data
         if(games[0] == null){
             message.channel.send('**Match Not Found**')
